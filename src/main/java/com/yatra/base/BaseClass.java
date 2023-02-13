@@ -12,8 +12,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
+
+import com.yatra.utility.ExtentReport;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -24,6 +27,7 @@ public class BaseClass {
 
 	@BeforeSuite(groups= {"smoke","regression"})
 	public void loadConfig() throws IOException {
+		ExtentReport.SetExtent();
 		DOMConfigurator.configure("log4j.xml");
 		File file = new File(System.getProperty("user.dir")+"\\Configuration\\confi.properties");
 		fis = new FileInputStream(file);
@@ -54,5 +58,10 @@ public class BaseClass {
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+	}
+	@AfterSuite(groups= {"smoke","regression"})
+	public static void endReport() {
+		ExtentReport.endReport();
+
 	}
 }
