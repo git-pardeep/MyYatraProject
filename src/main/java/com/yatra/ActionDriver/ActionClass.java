@@ -278,7 +278,7 @@ public class ActionClass extends BaseClass{
 	}
 
 
-	public boolean JSClick(WebDriver driver, WebElement ele) {
+	public boolean JSClick(WebDriver driver, WebElement ele) throws Exception {
 		boolean flag = false;
 		try {
 			// WebElement element = driver.findElement(locator);

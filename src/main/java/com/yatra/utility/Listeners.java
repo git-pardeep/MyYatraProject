@@ -49,7 +49,7 @@ public class Listeners extends ExtentReport implements ITestListener {
 
 //				FileUtils.copyFile(screenshot, new File("C:\\java test\\MyProject\\yatraproject\\ScreenShots\\"+screendate+ " -" +result.getName()  +".png"));
 				String path ="C:\\java test\\MyProject\\yatraproject\\ScreenShots\\yatra.png"; 
-						test.fail("Screenshot attched" , MediaEntityBuilder.createScreenCaptureFromPath("C:\\java test\\MyProject\\yatraproject\\ScreenShots\\yatra.png").build());
+						test.fail("Screenshot attched" , MediaEntityBuilder.createScreenCaptureFromPath("C:\\java test\\MyProject\\yatraproject\\ScreenShots\\yatra1.png").build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

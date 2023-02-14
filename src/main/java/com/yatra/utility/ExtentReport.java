@@ -14,8 +14,6 @@ public class ExtentReport {
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir")+"\\extent-config.xml");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
-
-		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("HostName", "MyHost");
 		extent.setSystemInfo("ProjectName", "YatraProject");
 		extent.setSystemInfo("Tester", "Pardeep");

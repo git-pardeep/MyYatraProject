@@ -14,7 +14,7 @@ public class IndexPage extends BaseClass {
 	ActionClass action = new ActionClass();
 	@FindBy(xpath = "//input[@id='BE_flight_origin_city']")
 	private WebElement departFrom;
-	@FindBy(xpath = "//input[@id='BE_flight_arrival_city'].")
+	@FindBy(xpath = "//input[@id='BE_flight_arrival_city']")
 	private WebElement goingTo;
 	@FindBy(xpath = "//label[@for='BE_flight_origin_date']")
 	private WebElement origindate;
